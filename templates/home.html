@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='app.css') }}">
+<video autoplay loop muted  class="clip">
+ <source src="{{ url_for('static' , filename='video.mp4') }}" type="video/mp4" />
+</video>
+
+<h1 style="color:white"> Welcome in Crpytography World!</h1>
+
+{% endblock %}

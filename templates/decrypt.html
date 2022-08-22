@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='crypto.css') }}">
+<div class="container" id="message-container">
+    <label style="color:white;">Message Decryption</label>
+    <form action="" method="POST">
+        <div class="form-group" style="margin-top:20px;width:600px">
+            <textarea class="form-control"  name="data"  placeholder= "Enter Message to be Decrypted!..."  disabled>{{ session.dec   }}</textarea>
+        </div>
+        <div class="form-group" style="margin-top:20px;width:600px">
+            <input class="form-control" type="text" name="key" placeholder="Input the same Key to Decrypt the message" required/>
+        </div>
+        <button class="btn btn-primary" type="submit" style="margin-top:20px;">Decrypt</button>
+    </form>
+</div>
+{% endblock %}
